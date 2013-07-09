@@ -69,3 +69,4 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 
 * 2013-07-08: **0.1.0** Initial release
+* 2013-07-08: **0.1.1** Added gruntplugin keyword to get into grunt plugin repo

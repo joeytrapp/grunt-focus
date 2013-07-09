@@ -1,7 +1,7 @@
 {
   "name": "grunt-focus",
   "description": "Focus and run a subset of watch targets",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/joeytrapp/grunt-focus",
   "author": {
     "name": "Joey Trapp",
@@ -43,6 +43,7 @@
     "watchers",
     "grunt",
     "watch",
-    "grunt-contrib-watch"
+    "grunt-contrib-watch",
+    "gruntplugin"
   ]
 }
