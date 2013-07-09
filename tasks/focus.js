@@ -15,6 +15,11 @@ module.exports = function(grunt) {
     var watchers = grunt.config.get('watch'),
         filter = new ObjectFilter(this.data);
 
+    if (typeof watchers !== 'object') {
+      grunt.fail.warn('watch config must be defined and be an object');
+      return;
+    }
+
     grunt.config.set('watch', filter.process(watchers));
     grunt.task.run(['watch']);
   });
