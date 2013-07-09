@@ -38,11 +38,11 @@
     "grunt": "~0.4.1"
   },
   "keywords": [
+    "focus",
+    "grunt-focus",
+    "watchers",
     "grunt",
     "watch",
     "grunt-contrib-watch"
-  ],
-  "dependencies": {
-    "extend": "~1.1.3"
-  }
+  ]
 }
