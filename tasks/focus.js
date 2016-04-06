@@ -12,15 +12,19 @@ var ObjectFilter = require('../lib/object_filter');
 
 module.exports = function(grunt) {
   grunt.registerMultiTask('focus', 'Your task description goes here.', function() {
-    var watchers = grunt.config.get('watch'),
-        filter = new ObjectFilter(this.data);
+    var watchers = grunt.config.get('watch');
 
     if (typeof watchers !== 'object') {
       grunt.fail.warn('watch config must be defined and be an object');
       return;
     }
 
-    grunt.config.set('watch', filter.process(watchers));
+    var filter = new ObjectFilter(this.data),
+        options = watchers.options,
+        filteredWatchers = filter.process(watchers);
+
+    filteredWatchers.options = options || {};
+    grunt.config.set('watch', filteredWatchers);
     grunt.task.run(['watch']);
   });
 };
